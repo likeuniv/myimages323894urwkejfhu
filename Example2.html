@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        num1 = 33;
+        var num2 = 23;
+        var num3;
+        var a = 11;
+        var b = '10';
+        var c = b - a;
+        console.log(typeof c)
+        console.log(typeof 100)
+        console.log(typeof 32.342)
+        console.log(typeof true)
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        console.log('----------------------------');
+
+        let aa = 23;
+        var ab = 24;
+        //var ab=23;
+        //let aa=33;
+        const ac = 25;
+
+        function newfun() {
+            var ab = 68;
+            console.log(ab);
+            let aa = 90;
+            console.log(aa);
+        }
+        newfun();
+        console.log(ab);
+        console.log(aa);
+
+        function aFun() {
+            window.y = 'Hello.....user,This is window variable.';
+            alert(window.y);
+        }
+        function bFun() {
+            alert(window.y);
+        }
+
+        let city = 'Chennai';
+        console.log(city);
+
+        {
+            let city = "Hyderabad";
+            console.log(city);
+        }
+
+        const cities = ["Hyderabad", "Visakhapatnam", "Chennai"];
+        console.log(cities);
+
+        const fruitPrices = new Map([
+            ["apple", 300],
+            ["banana", 90],
+            ["oranges", 200]
+        ]);
+        console.log(fruitPrices);
+
+        const PI = 3.14159;
+        console.log(PI);
+
+        function areaOfCircle() {
+            let r = 5;
+            let area = PI * r * r;
+            console.log(`Area of circle is ${area}`);
+        }
+
+        areaOfCircle();
+
+        const person = {
+            firstName: "Vinod",
+            lastName: "Kumar",
+            ciyt: "Darsi",
+            skill: ["Java", "C++", "SQL", "Salesforce"],
+            dispName: function () {
+                console.log('Full name : ' + this.firstName + ' ' + this.lastName);
+            }
+        }
+        console.log(person);
+        console.log(typeof person);
+        person.firstName = "Rishi";
+        console.log(person);
+        person.dispName();
+        console.log(person.skill[3]);
+        const vl = JSON.stringify(person);
+        console.log(vl);
+
+        function scoreRemarks() {
+            let marksScored = document.getElementById("marks").value;
+            console.log(marksScored);
+
+            if (marksScored < 0 || marksScored > 100) {
+                alert("Invalid marks.");
+            } else {
+                if (marksScored > 75) {
+                    alert("Very Good. Keep it up.");
+                } else if (marksScored > 55) {
+                    alert("Good");
+                } else if (marksScored > 35) {
+                    alert("Not bad");
+                } else {
+                    alert("Worst. Improve yourself.");
+                }
+            }
+        }
+
+        //let fruits = new Array("mango","apple","banana","guava","Litchi","papaya");
+        let fruits = ["mango", "apple", "banana", "guava", "Litchi", "papaya"];
+        console.log(fruits.length);
+        fruits.forEach((ele, index) => { console.log(`${index}) ${ele}`); });
+        fruits.push("Coconut");
+        fruits.unshift("grapes");
+        console.log(fruits);
+        console.log(fruits.reverse());
+
+        console.log('-----------------Math Obj-----------------------');
+        let numb = 30;
+
+        console.log(Math.pow(2,4));
+        console.log(Math.SQRT1_2);
+        console.log(Math.SQRT2);
+
+        console.log('-----------------RegEx Obj-----------------------');
+
+        let re = /hello/;
+        let str = 'Hello JavaScript';
+        let result = re.test(str);
+        console.log(result);
+
+        let re2 = /hello/i;
+        let str2 = 'Hello JavaScript';
+        let result2 = re2.test(str2);
+        console.log(result2);
+
+        let re3 = /(\w+)\s(\w+)/;
+        let str3 = 'Hello JavaScript';
+        let result3 = re3.test(str3);
+        console.log(result3);
+
+        console.log('vinod'.search(/i/));
+
+        console.log('we live in india'.match(/in/g));
+
+        console.log(/in/g.exec('we live in india'));
+
+        console.log('-----------------String Obj-----------------------');
+
+        console.log('vinod'.concat(' ','kumar'))
+        console.log('VINOD KUMAR REDDY'.toLowerCase());
+        console.log('vinod kumar reddy'.toUpperCase());
+        console.log('vinod'.length);
+        console.log('vinod kumar'.substring(1,3));//indexes less than 0 are treated 0
+        console.log('vinod kumar'.slice(1,3));//suppoert negavite back indexing
+        console.log('vinod kumar'.slice(1,3));//second param is length
+        console.log('   vinod    '.trim());
+        console.log('   vinod    '.trimStart());
+        console.log('   vinod    '.trimEnd());
+        console.log('vinod'.padStart(6,'*'))
+        console.log('vinod'.padEnd(6,'*'))
+        console.log('vinod!...'.repeat(3))
+        console.log('vinod reddy'.replace('reddy','kumar'))
+        console.log('vinod reddy'.replace(/reddy/i,'kumar'))
+        
+        let word = `Hello everyone!
+How are you?
+Hope you are good.`;
+        console.log(word);
+
+        console.log('vinod'.charAt(3));//do not support negavite
+        console.log('vinod'.at(-1));//supports negative 
+        console.log('vinod'.charCodeAt(1));
+        console.log('vinod kumar reddy'.split(' '));
+
+        let nameOfMe = 'VINOD'
+        let someHtml = `<h2>${nameOfMe}</h2>`
+        //document.getElementById("disp").innerHTML = someHtml;
+
+        console.log(`Hello ${nameOfMe}`);
+
+    </script>
+</head>
+
+<body>
+    <button onclick="aFun()">Click-1</button>
+    <button onclick="bFun()">Click-2</button>
+    <br>
+    <br>
+    <lable for="marks">Enter marks</lable>
+    <input type="text" name="marks" id="marks" value="0">
+    <button onclick="scoreRemarks()">Check</button>
+    <div id="disp"></div>
+</body>
+
+</html>

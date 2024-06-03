@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,600,700" rel="stylesheet">
+    <style>
+        body {
+            /* Old browsers */
+            background: #141E30;
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(-45deg, #35577D, #141E30);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1 {
+            color: rgb(216, 239, 239);
+            text-align: center;
+            line-height: auto;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1#headOne {
+            color: rgb(126, 191, 238);
+            text-align: center;
+            line-height: auto;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        button {
+            background-color: transparent;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 18px;
+            box-sizing: border-box;
+            border-style: inset ;
+            border-color: aliceblue ;
+            padding: 5px 2px;
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+            transition-duration: 200ms;
+        }
+
+        button:hover {            
+            background-color: rgb(26, 255, 0);
+            color: black;
+        }
+        #br-ci{
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border-left: 3px solid orange;
+            border-right: 3px solid green;         
+            animation: rot 3s infinite ease;
+        }
+
+        @keyframes rot{
+            0%{
+                transform: rotate(0);
+            }
+            50%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(720deg);
+            }
+        }
+        
+    </style>
+    <script>
+        function getTime() {
+            alert('You clicked a button.');
+            document.getElementById('disp').innerHTML = Date();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello User, Click the button to see time.</h1>
+    <h1 id="headOne">New Header</h1>
+    <button onclick="getTime()">Click me</button>
+    <p id="disp" style="color:whitesmoke"></p>
+    <br><br>
+    <div id="br-ci"></div>
+    <div style="width:700px;margin:0 auto;color:beige;border:1px dotted white;padding:10px">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit praesentium hic, alias eos dolore incidunt corporis ipsa veniam nisi reprehenderit, molestiae est iure. Quia, quaerat voluptatibus molestias assumenda perferendis architecto?
+        Beatae optio est adipisci blanditiis ea, quia minus rem alias laborum molestias temporibus quos tempora id nostrum provident voluptatibus, deleniti aut, atque autem? Maxime, distinctio corporis vero odio quisquam quis.
+        Vel, quia quis! Voluptate eius unde accusamus nemo est excepturi, laudantium ducimus odio reiciendis, neque quaerat maiores quidem nisi quos hic enim inventore sequi non aperiam impedit atque asperiores quae!
+        Facere nulla, esse itaque eveniet nesciunt dolore reprehenderit sint delectus ratione animi ad alias blanditiis non. Quaerat rem ullam eum aut, laudantium rerum dolore fugit ex nostrum atque! Molestiae, est.
+        Animi, aspernatur ducimus! Voluptatem impedit eum possimus temporibus necessitatibus pariatur veritatis velit, libero ut nobis reprehenderit repellat explicabo molestias voluptas! Minus officiis doloremque quidem necessitatibus mollitia sint perferendis in aliquid?
+    </div>
+
+    
+</body>
+
+</html>

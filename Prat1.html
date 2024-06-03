@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        async function f1(){
+            var values = await fetch('https://api.github.com/users').then(resp=>resp.json());
+            values.forEach(r=>{console.log(r);console.log(r.site_admin);
+            
+            });
+        }
+
+        f1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

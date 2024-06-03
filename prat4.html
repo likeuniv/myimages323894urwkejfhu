@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAT5</title>
+    <style>
+        input[type="text"]{
+            border : 1px solid rgb(74, 73, 73);
+            border-radius: 5px;
+            width: 130px;
+            height: 30px;
+        }
+        input[type="button"] {
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover{
+            background-color: rgb(222, 125, 141);
+        }
+    </style>
+    <script>
+        function myfun(num){            
+            document.getElementById('result').value+=num;   
+        }
+
+        function calRes(){
+            var val = document.getElementById('result').value;
+            try{
+                var res = eval(val);
+                document.getElementById('result').value=res;       
+            }catch(error){
+                document.getElementById('result').value='Error';
+            }            
+        }
+
+        function clearBtn(){
+            document.getElementById('result').value='';
+        }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" name="result" id="result">
+    
+    
+    <table>
+        <tr>
+            <td><input type="button" value="1" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="2" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="3" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="+" onclick="myfun(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="5" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="6" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="-" onclick="myfun(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="8" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="9" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="*" onclick="myfun(this.value)"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="clearBtn()"></td>
+            <td><input type="button" value="0" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="/" onclick="myfun(this.value)"></td>
+            <td><input type="button" value="=" onclick="calRes()"></td>
+        </tr>
+    </table>
+</body>
+</html>

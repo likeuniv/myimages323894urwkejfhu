@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function greet(name){
+            console.log("Hello "+name);
+        }
+
+        setTimeout(()=>(greet('Vinod')),3000);
+
+        function showTime(){
+            let dateTime = new Date();
+
+            let time = dateTime.toLocaleTimeString();
+
+            console.log(time);
+            let timeId = setTimeout(showTime,4000);
+            clearTimeout(timeId);
+        }
+
+        showTime();
+        */
+
+        function greet(name,callback){
+            console.log('Hi '+ name);
+            callback();
+        }
+
+        function callMe(){
+            console.log('I am callback function.');
+        }
+        
+        greet('Vinod',callMe);
+
+        function wish(name,myFunction){
+            console.log('Function invoked');
+            myFunction(name);
+        }
+
+        function sayName(name){
+            console.log('Hello '+name);
+        }
+
+        setTimeout(wish,3000,'Vinod',sayName);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

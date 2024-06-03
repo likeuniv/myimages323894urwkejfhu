@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('<------------ES-6 Classes--------------->');
+
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype.getName = function () {
+            console.log('Name is ' + this.name);
+        }
+
+        let p1 = new Person('Vinod');
+
+        p1.getName();
+
+        console.log(p1 instanceof Person);
+        console.log(p1 instanceof Object);
+
+        console.log(isNaN('akjak'))
+
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+
+            greetUser() {
+                console.log('Hello ' + this.name + '!');
+            }
+        }
+
+        let u1 = new User('Nani');
+
+        console.log(Object.getOwnPropertyNames(u1));
+
+        u1.greetUser();
+
+        class Rectangle {
+            constructor(lenght, breadth) {
+                this.lenght = lenght;
+                this.breadth = breadth;
+            }
+
+            getArea() {
+                return this.calcArea();
+            }
+
+            calcArea() {
+                return this.lenght * this.breadth;
+            }
+        }
+
+        let r = new Rectangle(12, 33);
+        console.log(r.getArea());
+
+
+
+        let Square = class {
+            constructor(side) {
+                this.side = side;
+            }
+
+            calcArea() {
+                return this.side ** 2;
+            }
+        }
+
+        let sq = new Square(4);
+        console.log(Square.name);
+        console.log(sq.calcArea());
+
+        let Square1 = class Square2 {
+            constructor(side) {
+                this.side = side;
+            }
+
+            calcArea() {
+                return this.side ** 2;
+            }
+        }
+
+        console.log(Square1.name);
+
+        class Student {
+            constructor(name) {
+                this.name = name
+            }
+
+            set nameVal(val) {
+                if (val.lenght < 4) {
+                    console.log('Short name not accepted');
+                    return;
+                }
+                this.name = val;
+            }
+
+            get nameVal() {
+                return this.name;
+            }
+        }
+
+        let s = new Student('Arj');
+        //s.nameVal='cal';
+        console.log(s.name);
+
+        console.log('<--------------Destructuring------------------>');
+
+        const Ship = {
+            Name: 'Cruize ship',
+            startLoc: 'VSKP',
+            destLoc: 'SGP'
+        }
+
+        let { Name: shipName, startLoc: fPoint, destLoc: ePoint } = Ship;
+        console.log(shipName);
+        console.log(fPoint);
+        console.log(ePoint);
+
+        const arrVal = ["one", "two", "three"];
+        const [x, y, z] = arrVal;
+        console.log(x + " | " + y + " | " + z);
+
+        const arrVal1 = [10, 5];
+        let [x1 = 5, y1 = 7] = arrVal1;
+        console.log(x1 + " | " + y1);
+
+        const dog = {
+            name: 'snoopy'
+        }
+
+        // let [name,age=12] = dog;
+
+        //console.log(name+" | "+age);
+
+        let x2 = 3;
+        let y2 = 4;
+        [x2, y2] = [y2, x2];
+        console.log(x2 + " | " + y2);
+
+        console.log('<--------------Spread Operators------------------>');
+        
+        const arrVal2 = [1,2,3,4,5,6];
+        console.log(arrVal2);
+        console.log(...arrVal2);
+
+        const arrVal3 = [11,12,13];
+        const arrVal4 = [...arrVal3,15,16];
+        console.log(arrVal4);
+
+        let arrVal5 = [11,12,13];
+        let arrVal6 = arrVal5;
+
+        arrVal5.push(14);
+
+        console.log(arrVal5);
+        console.log(arrVal6);
+
+
+        const obj1 = {x:1,y:2};
+        const obj2 = {z:3};
+        const obj3 = {...obj1,...obj2};
+        console.log(obj3);
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
